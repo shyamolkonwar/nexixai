@@ -99,7 +99,7 @@ const UseCasesSection = () => {
             <div className="aspect-w-16 aspect-h-9">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&rel=0"
+                src="https://www.youtube.com/embed/a-PAcmi5Kas?autoplay=0&controls=1&rel=0"
                 title="Prism AI Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -144,7 +144,15 @@ const UseCasesSection = () => {
   );
 };
 
-const UseCaseCard = ({ icon, title, description, image, gradient }) => {
+interface UseCaseCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  image: string;
+  gradient: string;
+}
+
+const UseCaseCard = ({ icon, title, description, image, gradient }: UseCaseCardProps) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {

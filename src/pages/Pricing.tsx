@@ -25,7 +25,7 @@ const Pricing = () => {
             <PricingCard
               title="Free"
               price="$0"
-              description="Perfect for trying out Prism AI"
+              description="Perfect for trying out Nexix AI"
               features={[
                 "1 AI Employee",
                 "Basic features",

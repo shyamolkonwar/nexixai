@@ -9,7 +9,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About Prism AI
+              About Nexix AI
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Prism AI is a platform that empowers businesses to build and deploy real-time AI employees for complex tasks. Our mission is to make AI accessible and actionable for everyone.
@@ -95,14 +95,25 @@ const About = () => {
   );
 };
 
-const StatsCard = ({ number, label }) => (
+interface StatsCardProps {
+  number: string;
+  label: string;
+}
+
+const StatsCard = ({ number, label }: StatsCardProps) => (
   <div className="bg-white p-6 rounded-xl shadow-sm text-center">
     <div className="text-3xl font-bold text-[#C5BAFF] mb-2">{number}</div>
     <div className="text-gray-600">{label}</div>
   </div>
 );
 
-const ValueCard = ({ icon, title, description }) => (
+interface ValueCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const ValueCard = ({ icon, title, description }: ValueCardProps) => (
   <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
     <div className="mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -110,7 +121,14 @@ const ValueCard = ({ icon, title, description }) => (
   </div>
 );
 
-const TeamMemberCard = ({ image, name, role, description }) => (
+interface TeamMemberCardProps {
+  image: string;
+  name: string;
+  role: string;
+  description: string;
+}
+
+const TeamMemberCard = ({ image, name, role, description }: TeamMemberCardProps) => (
   <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
     <img src={image} alt={name} className="w-full h-64 object-cover" />
     <div className="p-6">

@@ -2,37 +2,29 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import FeatureSection from '../components/FeatureSection';
 import UseCasesSection from '../components/UseCasesSection';
+import { CTASection } from '../components/CTASection';
 
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-[#E8F9FF] to-[#FBFBFB] min-h-screen flex items-center">
+      <section className="bg-gradient-to-b from-[#E8F9FF] to-[#FBFBFB] min-h-screen flex flex-col justify-center items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Build Realtime AI Employees in Minutes
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Automate complex tasks, from customer support to social media management, with AI that works in real-time.
             </p>
             <div className="mt-8 mb-12 flex justify-center space-x-4">
-              <button className="bg-[#7b2cbf] text-white px-6 py-2 rounded-lg hover:bg-opacity-90 flex items-center text-sm">
+              <button className="bg-[#7b2cbf] text-white px-8 py-3 rounded-lg hover:bg-opacity-90 flex items-center text-base">
                 Get Started for Free
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
               <button className="border-2 border-[#7b2cbf] text-[#7b2cbf] px-6 py-2 rounded-lg hover:bg-[#7b2cbf] hover:text-white text-sm">
                 Book Demo
               </button>
-            </div>
-            <div className="max-w-3xl mx-auto">
-              <iframe 
-                className="w-full rounded-xl shadow-lg aspect-video"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Product Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
             </div>
           </div>
         </div>
@@ -54,7 +46,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="Prism AI has transformed how we manage social media. It's like having an extra team member!"
+              quote="Nexix AI has transformed how we manage social media. It's like having an extra team member!"
               author="Sarah Johnson"
               role="Marketing Director"
               avatar="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
@@ -76,25 +68,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#C4D9FF] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Build Your AI Employees?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Join Prism AI today and automate your workflow in minutes.
-          </p>
-          <button className="bg-[#7b2cbf] text-white px-8 py-3 rounded-lg hover:bg-opacity-90 flex items-center mx-auto">
-            Sign Up Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 };
 
-const TestimonialCard = ({ quote, author, role, avatar }) => (
+interface TestimonialCardProps {
+  quote: string;
+  author: string;
+  role: string;
+  avatar: string;
+}
+
+const TestimonialCard = ({ quote, author, role, avatar }: TestimonialCardProps) => (
   <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
     <p className="text-gray-600 mb-4">"{quote}"</p>
     <div className="flex items-center">

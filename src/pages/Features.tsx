@@ -9,7 +9,7 @@ const Features = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Explore Prism AI's Features
+              Explore Nexix AI's Features
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Discover how our AI platform can transform your business operations with powerful, easy-to-use features.

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Bot className="h-8 w-8 text-[#C5BAFF]" />
-              <span className="font-bold text-xl">Prism AI</span>
+              <span className="font-bold text-xl">Nexix AI</span>
             </div>
             <p className="text-gray-600">
               Build and Deploy Realtime AI Employees for Complex Tasks
@@ -41,7 +41,7 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-600 hover:text-[#C5BAFF]">About</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-[#C5BAFF]">Contact</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-[#7b2cbf]">Contact</Link></li>
               <li><a href="#" className="text-gray-600 hover:text-[#C5BAFF]">Careers</a></li>
             </ul>
           </div>
@@ -49,15 +49,15 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-[#C5BAFF]">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#C5BAFF]">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#C5BAFF]">Cookie Policy</a></li>
+              <li><Link to="/privacy-policy" className="text-gray-600 hover:text-[#7b2cbf]">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="text-gray-600 hover:text-[#7b2cbf]">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="text-gray-600 hover:text-[#7b2cbf]">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500">
-            © {new Date().getFullYear()} Prism AI. All rights reserved.
+            © {new Date().getFullYear()} Nexix AI. All rights reserved.
           </p>
         </div>
       </div>
